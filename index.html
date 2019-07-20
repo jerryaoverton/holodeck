@@ -46,16 +46,20 @@
                 new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load( holo_env + 'rt.jpg' ), side: THREE.DoubleSide }), //right side
                 new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load( holo_env + 'lf.jpg' ), side: THREE.DoubleSide }) //left side
             ];
+            var holo_material = new THREE.MeshFaceMaterial( holo_materials );
+            var holodeck = new THREE.Mesh( holo_geometry, holo_material );
+            scene.add( holodeck );
+            
+            //office
+            var office_dimension = 40
+            var office_geometry = new THREE.CubeGeometry(office_dimension, office_dimension, office_dimension)
+            var office_material = new THREE.MeshBasicMaterial( { color: 0x666666, wireframe: true  } );
+            var office = new THREE.Mesh(office_geometry, office_material)
+            scene.add(office)
             
             // lighting
             var ambientLight = new THREE.AmbientLight( 0xFFFFFF, 0.3 );
             scene.add( ambientLight );
-            
-            var holo_material = new THREE.MeshFaceMaterial( holo_materials );
-            //var holo_material = new THREE.MeshBasicMaterial( { color: 0x666666, wireframe: true  } );
-            
-            var holodeck = new THREE.Mesh( holo_geometry, holo_material );
-            scene.add( holodeck );
 
             // camera Position
             camera.position.z = 3;
