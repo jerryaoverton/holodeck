@@ -70,9 +70,8 @@
             //screen
             var screen_env = "screens/";
             var screen1_geometry = new THREE.PlaneGeometry( 2, 1);
-            var screen1_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.8, map: new THREE.TextureLoader().load( screen_env + 'screen1.jpg' ), side: THREE.DoubleSide} );
+            var screen1_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.5, map: new THREE.TextureLoader().load( screen_env + 'screen1.jpg' ), side: THREE.DoubleSide} );
             var screen1 = new THREE.Mesh( screen1_geometry, screen1_material );
-            screen1.position.z = 5
             
             scene.add( screen1 );
             
