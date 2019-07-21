@@ -74,13 +74,6 @@
             var screen1 = new THREE.Mesh( screen1_geometry, screen1_material );
             scene.add( screen1 );
             
-
-            // set the position of the image mesh in the x,y,z dimensions
-            mesh.position.set(0,0,4)
-
-            // add the image to the scene
-            scene.add(mesh);
-            
             // lighting
             var ambientLight = new THREE.AmbientLight( 0xFFFFFF, 0.3 );
             scene.add( ambientLight );
