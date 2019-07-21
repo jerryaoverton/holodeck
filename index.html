@@ -41,7 +41,7 @@
             var holo_materials = [
                 new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load( holo_env + "ft.jpg" ), side: THREE.DoubleSide }), //front side
                 new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load( holo_env + 'bk.jpg' ), side: THREE.DoubleSide }), //back side
-                new THREE.MeshBasicMaterial({ transparent:true, opacity:0.5, map: new THREE.TextureLoader().load( holo_env + 'up.jpg' ), side: THREE.DoubleSide }), //up side
+                new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load( holo_env + 'up.jpg' ), side: THREE.DoubleSide }), //up side
                 new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load( holo_env + 'dn.jpg' ), side: THREE.DoubleSide }), //down side
                 new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load( holo_env + 'rt.jpg' ), side: THREE.DoubleSide }), //right side
                 new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load( holo_env + 'lf.jpg' ), side: THREE.DoubleSide }) //left side
@@ -52,10 +52,20 @@
             
             //office
             var office_dimension = 3000
-            var office_geometry = new THREE.CubeGeometry(office_dimension, office_dimension, office_dimension)
-            var office_material = new THREE.MeshBasicMaterial( { color:0x666666, transparent:true, opacity:0.5, side: THREE.DoubleSide, wireframe: true  } );
-            var office = new THREE.Mesh(office_geometry, office_material)
-            scene.add(office)
+            var office_geometry = new THREE.CubeGeometry( office_dimension, office_dimension, office_dimension );
+            
+            var office_env = "studio/"
+            var office_materials = [
+                new THREE.MeshBasicMaterial({ transparent:true, opacity:0.2, map: new THREE.TextureLoader().load( office_env + "wall.jpg" ), side: THREE.DoubleSide }), //front side
+                new THREE.MeshBasicMaterial({ transparent:true, opacity:0.2, map: new THREE.TextureLoader().load( office_env + 'wall.jpg' ), side: THREE.DoubleSide }), //back side
+                new THREE.MeshBasicMaterial({ transparent:true, opacity:0.2, map: new THREE.TextureLoader().load( holo_env + 'up.jpg' ), side: THREE.DoubleSide }), //up side
+                new THREE.MeshBasicMaterial({ transparent:true, opacity:0.2, map: new THREE.TextureLoader().load( office_env + 'wall.jpg' ), side: THREE.DoubleSide }), //down side
+                new THREE.MeshBasicMaterial({ transparent:true, opacity:0.2, map: new THREE.TextureLoader().load( office_env + 'wall.jpg' ), side: THREE.DoubleSide }), //right side
+                new THREE.MeshBasicMaterial({ transparent:true, opacity:0.2, map: new THREE.TextureLoader().load( office_env + 'wall.jpg' ), side: THREE.DoubleSide }) //left side
+            ];
+            var office_material = new THREE.MeshFaceMaterial( office_materials );
+            var office = new THREE.Mesh( office_geometry, office_material );
+            scene.add( office );
             
             // lighting
             var ambientLight = new THREE.AmbientLight( 0xFFFFFF, 0.3 );
