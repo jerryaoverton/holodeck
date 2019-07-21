@@ -70,7 +70,7 @@
             //screen1
             var screen_env = "screens/";
             var screen1_geometry = new THREE.PlaneGeometry( 3, 1.5);
-            var screen1_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.5, map: new THREE.TextureLoader().load( screen_env + 'init.jpg' ), side: THREE.DoubleSide} );
+            var screen1_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.6, map: new THREE.TextureLoader().load( screen_env + 'init.jpg' ), side: THREE.DoubleSide} );
             var screen1 = new THREE.Mesh( screen1_geometry, screen1_material );
             screen1.position.set(0, 0, -1);
             
@@ -78,7 +78,7 @@
             
             //screen2
             var screen2_geometry = new THREE.PlaneGeometry( 3, 1.5);
-            var screen2_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.5, map: new THREE.TextureLoader().load( screen_env + 'targeting.jpg' ), side: THREE.DoubleSide} );
+            var screen2_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.6, map: new THREE.TextureLoader().load( screen_env + 'targeting.jpg' ), side: THREE.DoubleSide} );
             var screen2 = new THREE.Mesh( screen2_geometry, screen2_material );
             screen2.position.set(3, 0, 0.5);
             screen2.rotation.y += -1
@@ -87,7 +87,7 @@
             
             //screen3
             var screen3_geometry = new THREE.PlaneGeometry( 3, 1.5);
-            var screen3_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.5, map: new THREE.TextureLoader().load( screen_env + 'planet.jpg' ), side: THREE.DoubleSide} );
+            var screen3_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.6, map: new THREE.TextureLoader().load( screen_env + 'planet.jpg' ), side: THREE.DoubleSide} );
             var screen3 = new THREE.Mesh( screen3_geometry, screen3_material );
             screen3.position.set(-3, 0, 0.5);
             screen3.rotation.y += 1
@@ -96,7 +96,7 @@
             
             //screen4
             var screen4_geometry = new THREE.PlaneGeometry( 3, 1.5);
-            var screen4_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.5, map: new THREE.TextureLoader().load( screen_env + 'design.jpg' ), side: THREE.DoubleSide} );
+            var screen4_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.6, map: new THREE.TextureLoader().load( screen_env + 'design.jpg' ), side: THREE.DoubleSide} );
             var screen4 = new THREE.Mesh( screen4_geometry, screen4_material );
             screen4.position.set(0, 2, -1);
             screen4.rotation.x += 1
