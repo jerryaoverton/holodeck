@@ -80,8 +80,8 @@
             var screen2_geometry = new THREE.PlaneGeometry( 3, 1.5);
             var screen2_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.5, map: new THREE.TextureLoader().load( screen_env + 'screen1.jpg' ), side: THREE.DoubleSide} );
             var screen2 = new THREE.Mesh( screen2_geometry, screen2_material );
-            screen2.position.set(2, 0, 0.5);
-            screen2.rotation.y += 0.1
+            screen2.position.set(3, 0, 0.5);
+            screen2.rotation.y += -1
             
             scene.add( screen2 );
             
