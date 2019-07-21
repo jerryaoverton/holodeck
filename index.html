@@ -95,7 +95,7 @@
             scene.add( screen3 );
             
             //screen4
-            var screen4_geometry = new THREE.PlaneGeometry( 4, 4);
+            var screen4_geometry = new THREE.PlaneGeometry( 3, 1.5);
             var screen4_material = new THREE.MeshBasicMaterial( {transparent:true, opacity:0.5, map: new THREE.TextureLoader().load( screen_env + 'screen1.jpg' ), side: THREE.DoubleSide} );
             var screen4 = new THREE.Mesh( screen4_geometry, screen4_material );
             screen4.position.set(0, 2, -1);
